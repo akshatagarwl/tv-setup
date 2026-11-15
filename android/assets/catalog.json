@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "release": "0.1.0-preview",
+  "features": [
+    {
+      "id": "tizentube",
+      "name": "TizenTube",
+      "description": "Install official TizenTube Cobalt, keeping any existing installation unchanged. The APK is pinned; its web scripts still follow upstream updates. Channel-list import is not included.",
+      "manual": "Open TizenTube on the TV when ready, then sign into YouTube yourself. Channel-list import is not yet automated.",
+      "artifacts": [
+        {"id":"tizentube-arm64","package":"io.gh.reisxd.tizentube.cobalt","version":"2.0.3","minSdk":24,"abis":["arm64-v8a"],"size":153048724,"sha256":"4e3df211abb243cb06b06ba3676fe62c3d5b59baa47c1a0050cb180b3493e539","signerSha256":"378ea3935af1b95c32f6ce193f4ff7f420cdc2d7160c8c866d28d6a91042ec9a","url":"https://github.com/reisxd/TizenTubeCobalt/releases/download/v2.0.3/cobalt-arm64.apk","source":"https://github.com/reisxd/TizenTubeCobalt/tree/v2.0.3"},
+        {"id":"tizentube-arm","package":"io.gh.reisxd.tizentube.cobalt","version":"2.0.3","minSdk":24,"abis":["armeabi-v7a"],"size":80570825,"sha256":"72a3527f520db3a1b414916ad96481244e451c41e272ae33344ae5e79abb37dd","signerSha256":"378ea3935af1b95c32f6ce193f4ff7f420cdc2d7160c8c866d28d6a91042ec9a","url":"https://github.com/reisxd/TizenTubeCobalt/releases/download/v2.0.3/cobalt-arm.apk","source":"https://github.com/reisxd/TizenTubeCobalt/tree/v2.0.3"}
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "Google voice-search handoff",
+      "description": "Keep Google Assistant and send completed YouTube searches to TizenTube. No microphone permission or remote-key filtering. Requires TizenTube.",
+      "manual": "On the TV, enable TizenTube voice search handoff in Accessibility. Google processes your voice. This helper reads completed Google search text; do not enable services you do not trust.",
+      "requires": ["tizentube"],
+      "artifacts": [{"id":"search-handoff","package":"io.akshat.tvsearch","version":"1.0","minSdk":24,"abis":[],"size":12775,"sha256":"39ce4a6af519f5cab3a763b471587cfc3dd77f643748e794a5d029c85867436a","signerSha256":"d6c1ffae369de4ab85ee8f0b6a4b5f8cf95558b0c96ff96c5b1fda4cd4121536","url":"bundled:search-handoff-1.0.apk","source":"https://github.com/akshatagarwl/tv-search-handoff/tree/fbd2c30"}]
+    },
+    {
+      "id": "proton",
+      "name": "Proton VPN",
+      "description": "Install the official TV-compatible VPN app. Does not connect automatically or purchase a subscription. Free streaming availability is not guaranteed.",
+      "manual": "Open Proton VPN on the TV, sign in using its QR code and enable Settings > Auto-connect if wanted. A VPN can affect all streaming apps. Approve Android's VPN prompt yourself. Never enable network lockdown before testing recovery.",
+      "artifacts": [{"id":"proton","package":"ch.protonvpn.android","version":"5.20.98.0","minSdk":26,"abis":[],"size":60497711,"sha256":"c4d531002b98953b66589bc9bdf83fdd1ad51f35f6e5ebb41bccb4156104fc27","signerSha256":"dcc9439ec1a6c6a8d0203f3423ee42bcc8b970628e53cb73a0393f398dd5b853","url":"https://github.com/ProtonVPN/android-app/releases/download/5.20.98.0/ProtonVPN-5.20.98.0.605209800.-production-vanilla-direct-release.apk","source":"https://github.com/ProtonVPN/android-app/tree/5.20.98.0"}]
+    }
+  ]
+}

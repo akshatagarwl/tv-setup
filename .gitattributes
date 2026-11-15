@@ -1,0 +1,5 @@
+# Preserve upstream source/license formatting in reviewed vendor snapshots.
+vendor/** -whitespace
+# Generated verbatim concatenations of upstream notices/licenses.
+**/NOTICES.txt -whitespace
+*.apk binary

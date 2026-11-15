@@ -1,0 +1,34 @@
+name: TVSetup
+options:
+  bundleIdPrefix: io.akshat
+  deploymentTarget:
+    iOS: '16.0'
+packages:
+  TVSetupCore:
+    path: .
+targets:
+  TVSetup:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: TVSetupCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.akshat.tvsetup
+        PRODUCT_NAME: TVSetup
+        SWIFT_VERSION: '5.0'
+        MARKETING_VERSION: '0.1.0'
+        CURRENT_PROJECT_VERSION: '1'
+        TARGETED_DEVICE_FAMILY: '1,2'
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: TV Setup
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: Connect to the Android TV you choose to check compatibility and install only the apps you approve.
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+schemes:
+  TVSetup:
+    build:
+      targets:
+        TVSetup: all

@@ -74,6 +74,13 @@ This checks full APK v2 signatures with Android `apksigner`, hashes, certificate
 
 Optional Swift release-fixture test: place reviewed APKs at `tizentube-arm.apk`, `tizentube-arm64.apk`, `proton.apk` under a private directory and set `TVSETUP_RELEASE_APK_DIR` before `swift test`. Without that variable the fixture test skips, never downloads.
 
+## Public companion projects
+
+- [TV Channel Lists](https://github.com/akshatagarwl/tv-channel-lists): MIT builder and CC0 curated channel preferences. Personal and license-unclear combined datasets stay private. This installer does **not yet import** the public list.
+- [TizenTube filter fork](https://github.com/akshatagarwl/TizenTube/tree/feat/pr720-channel-block): source switches and compressed channel matching; existing installed snapshots are not changed by publishing list updates.
+- [Voice-search handoff](https://github.com/akshatagarwl/tv-search-handoff): retains Google recognition without remote-key filtering.
+- [Permission-free TV shortcut](https://github.com/akshatagarwl/tv-youtube-shortcut): original generic public artwork, no account data or signing keys.
+
 ## Architecture and documentation
 
 - `shared/`: versioned catalog, public companion APK, generated license notices. No account data or lists.

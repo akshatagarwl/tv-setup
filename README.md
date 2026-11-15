@@ -1,6 +1,8 @@
 # TV Setup
 
-A consent-first Android-phone and iPhone installer for Android TV. **Local preview, not a production release.** No TV is contacted by building or running tests.
+A consent-first Android-phone and iPhone installer for Android TV. **Experimental preview, not a production release.** No TV is contacted by building or running tests.
+
+[Download the Android phone preview](https://github.com/akshatagarwl/tv-setup/releases/tag/v0.1.0-preview) — locally debug-signed, not hardware-validated. Install it on your **phone**, not the TV. iPhone source builds are available below; there is no signed iPhone/TestFlight distribution yet.
 
 ## Implemented
 
